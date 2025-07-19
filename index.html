@@ -1,0 +1,645 @@
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandani Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5e6f7, #e0d3f5);
+      color: #333;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #d6b3e2;
+      color: #3b1e4a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #3b1e4a;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background-color: #3b1e4a;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #5e3a7d;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      object-fit: cover;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #f9f0fc;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: #5e3a7d;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #3b1e4a;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Nandani Portfolio</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="hero">
+      <img src="main.jpeg" alt="Nandani Profile Picture">
+      <h1>Hello, I'm Nandani</h1>
+      <p>Welcome to my visually dynamic portfolio! I'm a budding Data Analyst skilled in Python, SQL, Excel, and Tableau.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h1>About Me</h1>
+    <p>I am a final-year BBA (CA) student passionate about data and analytics. I specialize in turning data into meaningful insights through reports and dashboards.</p>
+  </section>
+
+  <section id="skills">
+    <h1>Skills</h1>
+    <p><strong>Programming:</strong> Python, SQL<br>
+       <strong>Tools:</strong> Tableau, Excel, Power BI<br>
+       <strong>Soft Skills:</strong> Problem-solving, Attention to detail, Communication
+    </p>
+  </section>
+
+  <section id="projects">
+    <h1>Projects</h1>
+    <div class="card-container">
+      <div class="card">
+        <img src="images/project1.png" alt="Sales Dashboard">
+        <h3>Sales Dashboard</h3>
+        <p>Interactive dashboard using Excel & Tableau to visualize sales performance.</p>
+        <a href="#">View Demo</a>
+      </div>
+      <div class="card">
+        <img src="images/project2.png" alt="Customer Churn Analysis">
+        <h3>Customer Churn</h3>
+        <p>Python project analyzing churn patterns using pandas, matplotlib, seaborn.</p>
+        <a href="#">View GitHub</a>
+      </div>
+      <div class="card">
+        <img src="images/project3.png" alt="Dental Order Management">
+        <h3>Dental Order System</h3>
+        <p>HTML/CSS/JS frontend for managing dental lab orders for clinics.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h1>Certificates</h1>
+    <div class="card-container">
+      <div class="card">
+        <img src="images/certificate1.jpg" alt="Certificate 1">
+        <h3>Python for Data Analysis</h3>
+        <p>Completed beginner to advanced course on Python and data manipulation.</p>
+      </div>
+      <div class="card">
+        <img src="images/certificate2.jpg" alt="Certificate 2">
+        <h3>SQL & Databases</h3>
+        <p>Certified SQL professional with hands-on experience in MySQL and PostgreSQL.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <p>Email: nandani@example.com<br>
+       LinkedIn: <a href="https://www.linkedin.com/in/nandanisattellu" target="_blank">linkedin.com/in/nandanisattellu</a>
+    </p>
+  </section>
+
+  <script>
+    // Fade in on scroll
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.1 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Navbar scrollspy effect
+    const navLinks = document.querySelectorAll(".nav-links a");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nandani Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5e6f7, #e0d3f5);
+      color: #333;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #d6b3e2;
+      color: #3b1e4a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #3b1e4a;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background-color: #3b1e4a;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+      position: relative;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section:not(:first-of-type)::before {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 2px;
+      background-color: #bfa2d5;
+      margin: 0 auto 3rem auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #5e3a7d;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      object-fit: cover;
+      padding: 4px;
+      background: linear-gradient(135deg, #b68ff6, #ddcfdf); /* Lavender gradient border */
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #f9f0fc;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: #5e3a7d;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #3b1e4a;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    a {
+      color: #3b1e4a;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Nandani Portfolio</div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About Me</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certificates" class="nav-link">Certificates</a>
+      <a href="#contact" class="nav-link">Contact Me</a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="hero">
+      <img src="main.jpeg" alt="Nandani Profile Picture">
+      <h1 id="type-effect"></h1>
+      <script>
+        const text = "Hello! 👋 Welcome to my portfolio.";
+        const speed = 50;
+        let i = 0;
+      
+        function typeWriter() {
+          if (i < text.length) {
+            document.getElementById("type-effect").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+      
+        window.onload = typeWriter;
+      </script>
+      
+        <p>I’m Nandani Sattellu — an aspiring data analyst with a curious mind and a drive to explore the stories hidden in data. 
+          This portfolio reflects my journey, my skills, and the passion I bring to every dataset I work with.</p>
+    </div>
+  </section>
+
+  <section id="about me">
+    <h1>About Me</h1>
+    <p>
+      I've recently completed my Graduation in <b>BBA (Computer Application)</b> from <b>Dr. D.Y. Patil College of Arts, Commerce and Science </b> with a strong interest in data analytics. 
+      Proficient in <b>MySQL, Tableau, Power BI,</b> and with a foundation in <b>Python,</b> I enjoy transforming data into actionable insights. 
+      My curiosity and drive for continuous learning are what push me forward in building a meaningful career in this field.
+    
+    </p>
+
+  </section>
+
+  <section id="skills">
+    <h1>Skills</h1>
+    <p>Here’s a categorized view of my skills in the field of data analytics:</p>
+  
+    <table style="width: 100%; max-width: 850px; margin: 2rem auto; border-collapse: collapse; font-size: 1rem;">
+      <thead>
+        <tr style="background-color: #d6b3e2; color: #3b1e4a;">
+          <th style="padding: 1rem; border: 1px solid #ccc;">Skill Area</th>
+          <th style="padding: 1rem; border: 1px solid #ccc;">Tools & Technologies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color: #f9f0fc;">
+          <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Databases</strong></td>
+          <td style="padding: 1rem; border: 1px solid #ccc;">MySQL, SQL (Querying & Joins)</td>
+        </tr>
+        <tr style="background-color: #fff;">
+          <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Programming Language</strong></td>
+          <td style="padding: 1rem; border: 1px solid #ccc;">Python (Basics, Pandas, Matplotlib)</td>
+        </tr>
+        <tr style="background-color: #f9f0fc;">
+          <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Data Visualization Tools</strong></td>
+          <td style="padding: 1rem; border: 1px solid #ccc;">Tableau, Power BI, Excel Charts</td>
+        </tr>
+        <tr style="background-color: #fff;">
+          <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Excel Skills</strong></td>
+          <td style="padding: 1rem; border: 1px solid #ccc;">Pivot Tables, VLOOKUP, Conditional Formatting</td>
+        </tr>
+        <tr style="background-color: #f9f0fc;">
+          <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Analytical Concepts</strong></td>
+          <td style="padding: 1rem; border: 1px solid #ccc;">Data Cleaning, Transformation, Dashboard Design</td>
+        </tr>
+        <tr style="background-color: #fff;">
+          <td style="padding: 1rem; border: 1px solid #ccc;"><strong>Soft Skills</strong></td>
+          <td style="padding: 1rem; border: 1px solid #ccc;">Problem-Solving, Communication, Attention to Detail</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+
+  <section id="projects">
+    <h1>Projects</h1>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://www.analyticsvidhya.com/wp-content/uploads/2019/04/dashboard-1.png" alt="Sales Dashboard">
+        <h3>Sales Dashboard</h3>
+        <p>Interactive dashboard using Excel & Tableau to visualize sales performance.</p>
+        <a href="#">View Demo</a>
+      </div>
+      <div class="card">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/1*USvDkkYkiq4RBFfF9uGcKg.png" alt="Customer Churn Analysis">
+        <h3>Customer Churn</h3>
+        <p>Python project analyzing churn patterns using pandas, matplotlib, seaborn.</p>
+        <a href="#">View GitHub</a>
+      </div>
+      <div class="card">
+        <img src="https://cdn.dribbble.com/users/861625/screenshots/15410190/media/b7e171d689cbb62c1cbebf26170d9df6.png" alt="Dental Order Management">
+        <h3>Dental Order System</h3>
+        <p>HTML/CSS/JS frontend for managing dental lab orders for clinics.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h1>Certificates</h1>
+    <div class="card-container">
+      <div class="card">
+        <a href="Python Programming-page-001.jpg" target="_blank">
+          <img src="Python Programming-page-001.jpg" alt="Python Certificate">
+        </a>
+        <h3>Python Programming (IT-ITES)</h3>
+        <p>
+          Successfully completed under the “Pradhan Mantri Kaushal Vikas Yojana” via NSDC E-Skill India portal.<br>
+          <strong>Date:</strong> 10-06-2025<br>
+          <strong>Duration:</strong> 400 Hours<br>
+          <strong>Grade:</strong> A
+        </p>
+      </div>
+      <div class="card">
+        <img src="https://i.ibb.co/2W0GRr2/sql-certificate.jpg" alt="SQL Certificate">
+        <h3>SQL & Databases</h3>
+        <p>Certified SQL professional with hands-on experience in MySQL and PostgreSQL.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <p>Email: nandinisattellu@gmail.com<br>
+       LinkedIn: <a href="https://www.linkedin.com/in/nandanisattellu" target="_blank">linkedin.com/in/nandanisattellu</a>
+    </p>
+  </section>
+
+  <script>
+    // Fade in on scroll
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Navbar link highlight on scroll
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html> 
